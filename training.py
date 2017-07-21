@@ -150,7 +150,7 @@ def testing(thres):
     pred_list = []
     res = diff.eval(feed_dict={x:image_list})
     for i in res:
-        if i>thres:
+        if i>thres*1.2:
             pred_list.append(1)
         else:
             pred_list.append(0)
